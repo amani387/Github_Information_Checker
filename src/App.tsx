@@ -1,7 +1,7 @@
 interface Repo {
   name: string;
   language: string | null;
-  [key: string]: any; 
+  [key: string]: unknown; 
 }
 
 import { useState } from "react";
@@ -45,7 +45,7 @@ const isValidGitHubUsername = (username: string) => {
          setRepoNumber(repoData.length || 0);
       const langCount: Record<string, number> = {};
 
-     repoData.forEach((repo) => {
+     repoData.forEach((repo: { language: string | null ; }) => {
       if (repo.language) {
         langCount[repo.language] = (langCount[repo.language] || 0) + 1;
       }
