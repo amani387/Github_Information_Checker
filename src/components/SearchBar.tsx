@@ -16,10 +16,10 @@ export default function SearchBar({ onSearch }: Props) {
     }
   };
   return (
-    <div className="flex justify-center mb-6 py-4">
+    <div className="flex justify-center mb-6 py-4 px-2">
       <input
         type="text"
-       className="w-full p-3 mr-2 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+       className="w-full max-w-md p-3 mr-2 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
         placeholder="Enter GitHub username"
         value={input}
         onChange={(e) => setInput(e.target.value)}

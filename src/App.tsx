@@ -60,10 +60,10 @@ const isValidGitHubUsername = (username: string) => {
 
   return (
    <div className="min-h-screen bg-gradient-to-br from-gray-800 via-gray-900 to-black text-white flex items-center justify-center p-4">
-  <div className="bg-white/10 backdrop-blur-md rounded-2xl shadow-xl w-full max-w-6xl p-8">
-    <h1 className="text-4xl font-bold text-center mb-6 text-white drop-shadow">
-      GitHub Profile Explorer
-    </h1>
+    <div className="bg-white/10 backdrop-blur-md rounded-2xl shadow-xl w-full max-w-6xl p-8 sm:p-8 mx-auto">
+      <h1 className="text-4xl font-bold text-center mb-6 text-white drop-shadow">
+        GitHub Profile Explorer
+      </h1>
     <SearchBar onSearch={fetchData} />
     {profile &&  (
       <div className="bg-gradient-to-r from-white/30 via-white/20 to-white/10 backdrop-blur-lg border-b border-white/30 py-4 rounded-2xl"
