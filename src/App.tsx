@@ -72,9 +72,9 @@ const isValidGitHubUsername = (username: string) => {
       </div>
     )}
   
-    {Object.keys(languages).length > 0 &&    <div className="bg-gradient-to-r from-white/30 via-white/20 to-white/10 backdrop-blur-lg border-b border-white/30 p-10 rounded-2xl"
+    {Object.keys(languages).length > 0 &&    <div className="bg-gradient-to-r from-white/30 via-white/20 to-white/10 backdrop-blur-lg border-b border-white/30 p-10 rounded-2xl mt-4"
 > <LanguageSection languages={languages} />  </div>}
-    {repos.length > 0 && <RepoList repos={repos} />}
+   
     {repos.length > 0 && (
       <div className="max-h-[500px] overflow-y-auto mt-4 space-y-4">
         <RepoList repos={repos} />
