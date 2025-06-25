@@ -10,7 +10,11 @@ export default function SearchBar({ onSearch }: Props) {
   const handleSearch = () => {
     if (input.trim()) onSearch(input.trim());
   };
-
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter" && input.trim()) {
+      onSearch(input.trim());
+    }
+  };
   return (
     <div className="flex justify-center mb-6 py-4">
       <input
@@ -19,6 +23,7 @@ export default function SearchBar({ onSearch }: Props) {
         placeholder="Enter GitHub username"
         value={input}
         onChange={(e) => setInput(e.target.value)}
+        onKeyDown={handleKeyDown}
       />
       <button
         onClick={handleSearch}
